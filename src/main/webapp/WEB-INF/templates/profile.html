@@ -1,0 +1,13 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{base::html (head=null,content=~{::Profile})}">
+
+<th:block th:fragment="Profile">
+    <h3>Profile</h3>
+    <p>Email: [[${ user.email }]]</p>
+    <p>Name: [[${user.name}]]</p>
+    <p>Description: [[${user.description}]]</p>
+</th:block>
+</html>
+
+
+
