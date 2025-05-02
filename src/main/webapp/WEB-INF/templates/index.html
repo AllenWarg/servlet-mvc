@@ -1,9 +1,9 @@
 <div th:replace="~{base :: html(head = null,content = ~{::content})}">
     <th:block th:fragment="content">
         <th:block th:if="${user!=null}">
-            <h3>Welcome {{ user.name }}!</h3>
+            <h3>Welcome [[${user.name}]]!</h3>
         </th:block>
-        <th:block th:if="${!user!=null}">
+        <th:block th:if="${user==null}">
             <h3>Welcome</h3>
         </th:block>
     </th:block>
