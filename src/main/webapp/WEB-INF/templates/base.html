@@ -46,32 +46,7 @@
         </div>
       </footer>
     </div>
-    <script th:inline="javascript">
-      console.log("...........")
-      $(function () {
-        $('#signinForm').submit(function (e) {
-          e.preventDefault();
-          var data = {
-            email: $('#email').val(),
-            password: $('#password').val()
-          };
-          $.ajax({
-            type: 'POST',
-            url: '/signin',
-            data: JSON.stringify(data),
-            success: function (resp) {
-              if (resp.error) {
-                $('#error').text(resp.error);
-              } else {
-                location.assign('/');
-              }
-            },
-            contentType: 'application/json',
-            dataType: 'json'
-          });
-        });
-      });
-    </script>
   </body>
+
 </html>
 
